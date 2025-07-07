@@ -1,0 +1,11 @@
+<div class="user-card">
+  <div class="avatar">
+    <img src="https://img.freepik.com/premium-vector/cute-woman-avatar-profile-vector-illustration_1058532-14592.jpg" alt="User Avatar" />
+  </div>
+  <div class="info">
+  <h3>👤 {{ user?.fullName }}</h3>
+  <p>📧 {{ user?.email }}</p>
+  <p>📱 {{ user?.phone }}</p>
+  <p>🕓 عضو از: {{ user?.createdAt | date:'yyyy/MM/dd' }}</p>
+  </div>
+</div>

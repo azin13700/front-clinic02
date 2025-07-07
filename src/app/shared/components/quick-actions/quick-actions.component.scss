@@ -1,0 +1,31 @@
+
+.quick-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+
+  .action-box {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(90deg, #42a5f5, #1e88e5);
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(66, 165, 245, 0.4);
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      background: linear-gradient(90deg, #2196f3, #1565c0);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow p-4" style="width: 400px;">
+    <h4 class="text-center mb-4">ورود به حساب کاربری</h4>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="email" class="form-label">ایمیل</label>
+        <input type="email" id="email" class="form-control" formControlName="email">
+        <div class="text-danger small" *ngIf="email && email">
+          لطفاً ایمیل معتبر وارد کنید
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">رمز عبور</label>
+        <input type="password" id="password" class="form-control" formControlName="password">
+        <div class="text-danger small" *ngIf="password && password">
+          رمز عبور حداقل ۶ کاراکتر
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">
+        ورود
+      </button>
+    </form>
+  </div>
+</div>

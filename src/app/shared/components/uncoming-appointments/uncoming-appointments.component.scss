@@ -1,0 +1,68 @@
+.appointments-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+  }
+
+  .appointment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f9fc;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+
+    .left h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .left p {
+      margin: 0.2rem 0;
+      color: #555;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .status {
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+      }
+
+      .active {
+        background: #e8f5e9;
+        color: #388e3c;
+      }
+
+      .cancelled {
+        background: #ffebee;
+        color: #d32f2f;
+      }
+
+      button {
+        background: transparent;
+        color: #d32f2f;
+        border: 1px solid #d32f2f;
+        border-radius: 8px;
+        padding: 4px 10px;
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+          background: #fbe9e7;
+        }
+      }
+    }
+  }
+}

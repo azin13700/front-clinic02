@@ -1,0 +1,60 @@
+
+.messages-section {
+  margin-top: 2rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    button {
+      background: transparent;
+      color: #1976d2;
+      border: 1px solid #1976d2;
+      border-radius: 8px;
+      padding: 4px 12px;
+      font-size: 12px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e3f2fd;
+      }
+    }
+  }
+
+  .message-card {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    background: #f8f9fb;
+    margin-bottom: 1rem;
+
+    .msg-content {
+      p {
+        margin: 0.4rem 0;
+      }
+
+      .timestamp {
+        font-size: 12px;
+        color: #999;
+      }
+
+      &.unread {
+        background-color: #e3f2fd;
+        border-left: 4px solid #1976d2;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+

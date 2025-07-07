@@ -1,0 +1,15 @@
+<div class="appointments-section">
+  <h2>نوبت‌های آینده</h2>
+
+  <div class="appointment-card" *ngFor="let a of appointments">
+    <div class="left">
+      <h3>{{ a.doctorName }}</h3>
+      <p>تاریخ: {{ a.appointmentDate | date: 'yyyy/MM/dd' }}</p>
+      <p>ساعت: {{ a.appointmentTime }}</p>
+    </div>
+    <div class="right">
+      <span class="status" [ngClass]="a.status === 'رزرو شده' ? 'active' : 'cancelled'">{{ a.status }}</span>
+      <button *ngIf="a.status === 'رزرو شده'">لغو نوبت</button>
+    </div>
+  </div>
+</div>

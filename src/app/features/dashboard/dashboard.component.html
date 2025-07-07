@@ -1,0 +1,62 @@
+<!-- <div class="dashboard-container" >
+  <h3>سلام {{fullName}} عزیز</h3>
+  <p>نقش شما در سیستم : {{role}}</p>
+
+<app-uncoming-appointments></app-uncoming-appointments>
+
+
+  <div class="actions">
+
+
+  </div>
+
+</div> -->
+
+<div class="layout-container">
+
+  <!-- سایدبار -->
+  <aside class="sidebar">
+    <div class="logo">🩺 کلینیک من</div>
+    <nav class="nav">
+      <a routerLink="/dashboard" routerLinkActive="active"><i class="icon">🏠</i> داشبورد</a>
+      <a routerLink="/appointments/new" routerLinkActive="active"><i class="icon">📅</i> گرفتن نوبت</a>
+      <a routerLink="/messages" routerLinkActive="active"><i class="icon">💬</i> پیام‌ها</a>
+      <a routerLink="/records" routerLinkActive="active"><i class="icon">📁</i> سوابق</a>
+      <a routerLink="/profile" routerLinkActive="active"><i class="icon">👤</i> پروفایل</a>
+    </nav>
+  </aside>
+
+  <!-- بخش اصلی -->
+  <div class="main-content">
+
+    <!-- نوار بالا -->
+    <header class="topbar">
+      <div class="welcome">سلام، {{fullName}} عزیز خوش آمدید</div>
+      <div class="actions">
+        <i class="notif">🔔</i>
+        <i class="avatar">👩</i>
+           <button (click)="logout()">خروج </button>
+      </div>
+    </header>
+
+    <!-- بدنه داشبورد -->
+    <section class="dashboard-content">
+      <div class="row">
+        <app-user-info-card></app-user-info-card>
+        <app-uncoming-appointments></app-uncoming-appointments>
+
+      </div>
+
+      <div class="row">
+        <app-medical-records-preview></app-medical-records-preview>
+        <app-messages-preview></app-messages-preview>
+
+      </div>
+
+      <div class="row single">
+        <app-quick-actions></app-quick-actions>
+      </div>
+    </section>
+  </div>
+
+</div>

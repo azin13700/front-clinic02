@@ -1,0 +1,14 @@
+<div class="messages-section">
+  <div class="header">
+    <h2>پیام‌ها</h2>
+    <button (click)="openAllMessages()">نمایش همه</button>
+  </div>
+
+  <div class="message-card" *ngFor="let msg of messages">
+    <div class="msg-content" [ngClass]="{ 'unread': !msg.isRead }">
+      <strong>{{ msg.sender }}</strong>
+      <p>{{ msg.content }}</p>
+      <span class="timestamp">{{ msg.sentAt  }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="records-section">
+  <h2>سوابق پزشکی اخیر</h2>
+
+  <div class="record-card" *ngFor="let r of records">
+    <div class="content">
+      <p class="desc">{{ r.description }}</p>
+      <span class="doctor">توسط: {{ r.doctorName }}</span>
+      <span class="date">{{ r.createdAt  }}</span>
+    </div>
+    <button (click)="openFile(r.filePath)">مشاهده فایل</button>
+  </div>
+</div>
