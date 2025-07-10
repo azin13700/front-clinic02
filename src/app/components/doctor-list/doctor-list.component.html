@@ -1,0 +1,8 @@
+<h2>لیست پزشکان</h2>
+<div class="doctor-card" *ngFor="let doctor of doctors">
+  <h4>{{ doctor.fullName }}</h4>
+  <p>تخصص: {{ doctor.specialty || '---' }}</p>
+  <p>ایمیل: {{ doctor.email }}</p>
+  <p>تلفن: {{ doctor.phone }}</p>
+  <button class="btn btn-primary">گرفتن نوبت</button>
+</div>
