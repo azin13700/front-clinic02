@@ -7,29 +7,34 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { DoctorListComponent } from './components/doctor-list/doctor-list.component';
 
 
-const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: LayoutComponent,
-  //   children: [
-  //     {
-  //       path: 'login',
-  //       loadComponent: () => import('./features/auth/login/login.component').then(m => m.LoginComponent)
-  //     },
-  //     {
-  //       path: '',
-  //       redirectTo: 'login',
-  //       pathMatch: 'full'
-  //     }
-  //   ]
-  // }
+export const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      {
+                path: 'dashboard',
+                loadChildren: () =>
+                    import(
+                        'src/app/shared/header/header.routes'
+                    ),
+            },
+     //  { path: 'dashboard', component: DashboardComponent },
+        {
+                path: 'doctor-list',
+                loadChildren: () =>
+                    import(
+                        'src/app/components/doctor-list/Doctor-list.routes'
+                    ),
+            },
+     // { path: 'dashboard', component: DashboardComponent },
+    //  { path: 'dashboard/doctors', component: DoctorListComponent },
 
-    { path: '', component: LayoutComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'dashboard', component: DashboardComponent },
-   { path: 'doctors', component: DoctorListComponent },
-
+    ]
+  }
 ];
 
 @NgModule({

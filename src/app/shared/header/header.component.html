@@ -1,20 +1,63 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="/" >کلینیک هوشمند</a>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="/login">ورود</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active"  routerLink="/register"> ثبت‌نام نکردی؟ کلیک کن</a>
-        </li>
-
-      </ul>
-    </div>
-</nav>
+<header class="header" id="header">
+   <nav class="navbar container">
+       <a class="navbar-brand" routerLink="/" >کلینیک هوشمند</a>
+      <div class="search">
+         <form class="search-form">
+            <input type="text" name="search" class="search-input" placeholder="Search for Destinations" autofocus>
+            <button type="submit" class="search-submit" disabled><i class="bx bx-search"></i></button>
+         </form>
+      </div>
 
 
 
+      <div class="menu" id="menu">
+            <ul class="menu-inner">
+                <li class="menu-item"  *ngIf="!isLogin"><a routerLink="/login" class="menu-link">ورود</a></li>
+                <li class="menu-item"  *ngIf="!isLogin"><a routerLink="/register"class="menu-link">ثبت‌نام نکردی؟ کلیک کن</a></li>
+                  <div class="welcome"  *ngIf="isLogin">سلام، {{fullName}} عزیز خوش آمدید</div>
+                <div class="actions" *ngIf="isLogin">
+                  <!-- <i class="notif">🔔</i>
+                  <i class="avatar">👩</i> -->
+                    <button (click)="logout()" >خروج </button>
+                </div>
+            </ul>
+      </div>
+
+      <div class="burger" id="burger">
+         <span class="burger-line"></span>
+         <span class="burger-line"></span>
+         <span class="burger-line"></span>
+      </div>
+   </nav>
+</header>
+
+<div class="layout-container"  *ngIf="isLogin" >
+
+  <!-- سایدبار -->
+  <aside class="sidebar">
+    <div class="logo">🩺 کلینیک من</div>
+    <nav class="nav">
+      <a routerLink="/dashboard" routerLinkActive="active"><i class="icon">🏠</i> داشبورد</a>
+      <a (click)="showDoctorList()"><i class="icon">🏠</i> پزشکان</a>
+      <a routerLink="/appointments/new" routerLinkActive="active"><i class="icon">📅</i> گرفتن نوبت</a>
+      <a routerLink="/messages" routerLinkActive="active"><i class="icon">💬</i> پیام‌ها</a>
+      <a routerLink="/records" routerLinkActive="active"><i class="icon">📁</i> سوابق</a>
+      <a routerLink="/profile" routerLinkActive="active"><i class="icon">👤</i> پروفایل</a>
+    </nav>
+  </aside>
+
+  <!-- بخش اصلی -->
+  <div class="main-content">
+    <app-dashboard *ngIf="!isShowDoctorList"></app-dashboard>
+    <doctor-list *ngIf="isShowDoctorList"></doctor-list>
+
+
+    <section class="dashboard-content">
+
+    </section>
+  </div>
+
+</div>
 
 

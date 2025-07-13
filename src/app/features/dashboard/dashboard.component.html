@@ -15,30 +15,31 @@
 <div class="layout-container">
 
   <!-- سایدبار -->
-  <aside class="sidebar">
+  <!-- <aside class="sidebar">
     <div class="logo">🩺 کلینیک من</div>
     <nav class="nav">
       <a routerLink="/dashboard" routerLinkActive="active"><i class="icon">🏠</i> داشبورد</a>
-      <a routerLink="doctors" routerLinkActive="active"><i class="icon">🏠</i> پزشکان</a>
+      <a routerLink="/doctor-list" routerLinkActive="active"><i class="icon">🏠</i> پزشکان</a>
       <a routerLink="/appointments/new" routerLinkActive="active"><i class="icon">📅</i> گرفتن نوبت</a>
       <a routerLink="/messages" routerLinkActive="active"><i class="icon">💬</i> پیام‌ها</a>
       <a routerLink="/records" routerLinkActive="active"><i class="icon">📁</i> سوابق</a>
       <a routerLink="/profile" routerLinkActive="active"><i class="icon">👤</i> پروفایل</a>
     </nav>
-  </aside>
+  </aside> -->
 
   <!-- بخش اصلی -->
   <div class="main-content">
 
+
     <!-- نوار بالا -->
-    <header class="topbar">
+    <!-- <header class="topbar">
       <div class="welcome">سلام، {{fullName}} عزیز خوش آمدید</div>
       <div class="actions">
         <i class="notif">🔔</i>
         <i class="avatar">👩</i>
            <button (click)="logout()">خروج </button>
       </div>
-    </header>
+    </header> -->
 
     <!-- بدنه داشبورد -->
     <section class="dashboard-content">
@@ -50,7 +51,7 @@
 
       <div class="row">
         <app-medical-records-preview></app-medical-records-preview>
-        <app-messages-preview></app-messages-preview>
+        <!-- <app-messages-preview></app-messages-preview> -->
 
       </div>
 
