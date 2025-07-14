@@ -16,19 +16,14 @@ export const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       {
-                path: 'dashboard',
-                loadChildren: () =>
-                    import(
-                        'src/app/shared/header/header.routes'
-                    ),
-            },
+       path: 'dashboard',
+       loadChildren: () =>
+       import('src/app/shared/header/header.routes'),
+       },
      //  { path: 'dashboard', component: DashboardComponent },
-        {
-                path: 'doctor-list',
-                loadChildren: () =>
-                    import(
-                        'src/app/components/doctor-list/Doctor-list.routes'
-                    ),
+        {  path: 'doctor-list',
+           loadChildren: () =>
+           import('src/app/components/doctor-list/Doctor-list.routes'),
             },
      // { path: 'dashboard', component: DashboardComponent },
     //  { path: 'dashboard/doctors', component: DoctorListComponent },

@@ -1,4 +1,24 @@
-/* doctor-list.component.css */
+
+
+button {
+  width: 100%; /* w-full */
+  background-color: #2563eb; /* bg-blue-600 */
+  color: white;
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-size: 0.875rem; /* text-sm */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  direction: rtl;
+}
+
+ button:hover {
+  background-color: #1e40af; /* hover:bg-blue-700 */
+}
+
+
+
 .doctor-card {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -6,3 +26,176 @@
   margin: 1rem 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.user-card {
+  flex: 0 0 25%; /* یک چهارم عرض کانتینر */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  gap: 1.5rem;
+
+
+  &:hover{
+      //   background-color: rgb(30 27 75);
+        color: #fff !important;
+           transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+
+
+  .avatar {
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #eeeeee;
+    }
+  }
+
+  .info {
+    h4 {  /* اصلاح h3 به h4 چون در HTML استفاده کردی h4 */
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.3rem 0;
+      color: #666;
+    }
+
+    .role-badge {
+      background-color: #e3f2fd;
+      color: #1976d2;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+body{
+   font-family: 'Montserrat', sans-serif !important;
+  background-color: #AFACC6 !important;
+
+}
+
+
+main
+{
+  margin-top: 5rem;
+  max-width: 1200px;
+  width: 95%;
+}
+
+
+  .hire{
+   color: #7F56D9;
+    font-size: 0.975rem;
+    font-weight: 600;
+  }
+
+
+  h2{
+       color: #101828;
+  }
+
+
+  p{
+   max-width: 600px;
+    width: 100%;
+    color: #667085;
+  }
+
+
+  .btns{
+    button{
+      max-width: 150px;
+      width: 100%;
+    }
+
+
+      &.about{   border: 2px solid #D0D5DD;
+        color: darken(#667085, 30%)};
+
+
+      &.open{
+ background-color: #7F56D9
+      }
+
+  }
+
+
+  .user-profile{
+ .card{
+      max-width: 260px;
+      width: 20%;
+      cursor: pointer;
+      background-color: #F9FAFB;
+      border: 1.5px solid #98A2B3;
+      transition: 0.2s ease;
+ }
+      &:hover{
+  background-color: #7F56D9;
+        color: #fff !important;
+      }
+
+
+        a, a:visited, .title, p{
+  color: #fff !important;
+        }
+
+
+      img{
+  width: 120px;
+        height: 120px;
+      }
+
+
+      .name{
+    font-size: 1.125rem;
+      }
+
+
+      .title{
+ color: #7F56D9;
+      }
+
+
+      p{
+  max-width: 70%;
+        width: 100%;
+        font-size: 0.875rem;
+
+      }
+
+
+
+
+
+
+
+
+  }

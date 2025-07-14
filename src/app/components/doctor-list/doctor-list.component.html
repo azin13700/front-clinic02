@@ -1,8 +1,89 @@
-<h2>لیست پزشکان</h2>
-<div class="doctor-card" *ngFor="let doctor of doctors">
+
+
+<div class="cards-container">
+  <div class="user-card" *ngFor="let doctor of doctors">
+   <div class="avatar" >
+    <img src="https://img.freepik.com/premium-vector/cute-woman-avatar-profile-vector-illustration_1058532-14592.jpg" alt="User Avatar" />
+  </div>
+  <div class="info">
   <h4>{{ doctor.fullName }}</h4>
   <p>تخصص: {{ doctor.specialty || '---' }}</p>
   <p>ایمیل: {{ doctor.email }}</p>
-  <p>تلفن: {{ doctor.phone }}</p>
-  <button class="btn btn-primary">گرفتن نوبت</button>
+     <button (click)="bookAppointment(doctor.id)">
+        رزرو وقت
+      </button>
+  </div>
+  </div>
 </div>
+
+<!-- <p-dialog header="Edit Profile" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+    <span class="p-text-secondary block mb-8">Update your information.</span>
+    <div class="flex items-center gap-4 mb-4">
+        <label for="username" class="font-semibold w-24">Username</label>
+        <input pInputText id="username" class="flex-auto" autocomplete="off" />
+    </div>
+    <div class="flex items-center gap-4 mb-8">
+        <label for="email" class="font-semibold w-24">Email</label>
+        <input pInputText id="email" class="flex-auto" autocomplete="off" />
+    </div>
+    <div class="flex justify-end gap-2">
+        <p-button label="Cancel" severity="secondary" (click)="visible = false" />
+        <p-button label="Save" (click)="visible = false" />
+    </div>
+</p-dialog> -->
+
+
+<!-- <div class="p-6 max-w-xl mx-auto bg-white rounded-2xl shadow">
+  <h2 class="text-xl font-bold mb-4">رزرو وقت با {{ doctor?.fullName }}</h2>
+
+  <div class="mb-4">
+    <label class="block text-sm mb-1">تاریخ:</label>
+    <input type="date" [(ngModel)]="selectedDate" class="border p-2 rounded w-full" />
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-sm mb-1">ساعت:</label>
+    <input type="time" [(ngModel)]="selectedTime" class="border p-2 rounded w-full" />
+  </div>
+
+  <button
+    class="bg-blue-600 text-white px-4 py-2 rounded w-full"
+    (click)="book()">
+    تایید رزرو
+  </button>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="doctor-list-container">
+  <h2>پزشکان ما</h2>
+
+  <div class="doctor-grid">
+    <div *ngFor="let doctor of doctors" class="doctor-card">
+      <div class="header">
+        <img [src]="doctor.photoUrl || 'https://img.freepik.com/premium-vector/cute-woman-avatar-profile-vector-illustration_1058532-14592.jpg'" alt="doctor" />
+        <div>
+          <h3>{{ doctor.fullName }}</h3>
+          <p>{{ doctor.specialty }}</p>
+        </div>
+      </div>
+
+      <p class="description">
+        {{ doctor.description || 'اطلاعاتی ثبت نشده است.' }}
+      </p>
+
+      <button (click)="bookAppointment(doctor.id)">
+        رزرو وقت
+      </button>
+    </div>
+  </div>
+</div> -->
