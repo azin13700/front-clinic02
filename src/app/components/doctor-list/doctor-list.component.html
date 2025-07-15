@@ -9,28 +9,61 @@
   <h4>{{ doctor.fullName }}</h4>
   <p>تخصص: {{ doctor.specialty || '---' }}</p>
   <p>ایمیل: {{ doctor.email }}</p>
-     <button (click)="bookAppointment(doctor.id)">
+     <button (click)="bookAppointment(doctor.id)"  href="#open-modal">
         رزرو وقت
       </button>
   </div>
   </div>
 </div>
+<div class="modal-window" [class.show]="modalVisible">
+  <div>
+    <div class="container">
+    <h5> رزرو وقت با {{ doctor?.fullName }}</h5>
+  <div class="row align-items-center mt-5">
 
-<!-- <p-dialog header="Edit Profile" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
-    <span class="p-text-secondary block mb-8">Update your information.</span>
-    <div class="flex items-center gap-4 mb-4">
-        <label for="username" class="font-semibold w-24">Username</label>
-        <input pInputText id="username" class="flex-auto" autocomplete="off" />
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="input-group mb-3">
+         <label class="block text-sm mb-1">تاریخ:</label>
+    <input type="date" [(ngModel)]="selectedDate" class="border p-2 rounded w-full" />
+      </div>
+         <div class="mb-4">
+    <label class="block text-sm mb-1">ساعت:</label>
+    <input type="time" [(ngModel)]="selectedTime" class="border p-2 rounded w-full" />
+  </div>
     </div>
-    <div class="flex items-center gap-4 mb-8">
-        <label for="email" class="font-semibold w-24">Email</label>
-        <input pInputText id="email" class="flex-auto" autocomplete="off" />
-    </div>
-    <div class="flex justify-end gap-2">
-        <p-button label="Cancel" severity="secondary" (click)="visible = false" />
-        <p-button label="Save" (click)="visible = false" />
-    </div>
-</p-dialog> -->
+    <div class="col-2"></div>
+  </div>
+
+          <button
+    class="bg-blue-600 text-white px-4 py-2 rounded w-full"
+    (click)="book()">
+    تایید رزرو
+  </button>
+  </div>
+
+</div>
+
+<!-- <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's username" >
+</div>
+
+<button type="button" class="btn btn-primary btn-sm">Small button</button> -->
+
+
+    <!-- <button class="modal-close" (click)="closeModal()">✕</button>
+    <h5> رزرو وقت با {{ doctor?.fullName }}</h5>
+   <p-calendar [(ngModel)]="selectedDate" dateFormat="yy/mm/dd" ></p-calendar>
+<p>تاریخ انتخاب شده: {{ selectedDate | date:'yyyy/MM/dd' }}</p> -->
+
+
+
+  </div>
+</div>
+
+
+
 
 
 <!-- <div class="p-6 max-w-xl mx-auto bg-white rounded-2xl shadow">

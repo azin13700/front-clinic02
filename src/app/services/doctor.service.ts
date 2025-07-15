@@ -17,13 +17,13 @@ export class DoctorService {
   return this._http.get<any[]>(`${this.apiUrl}/GetAll` ,{ headers });
    }
 
-  getDoctorById(doctorId :string): Observable<any> {
+  getDoctorById(doctorId :number): Observable<any> {
       const token = localStorage.getItem('token');
       const headers = token ? new HttpHeaders().set('Authorization', `Bearer ${token}`) : undefined;
-  return this._http.get<any[]>(`${this.apiUrl}/GetAll` ,{ headers });
+  return this._http.get<any>(`${this.apiUrl}/${doctorId}`, { headers });
    }
      bookAppointment(data: any) {
-  return this._http.post('/api/appointments', data);
+  return this._http.post('https://localhost:7190/api/appointment/Create', data);
 }
 
 }
