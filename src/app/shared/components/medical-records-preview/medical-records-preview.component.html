@@ -1,4 +1,4 @@
-<div class="records-section">
+<!-- <div class="records-section">
   <h2>سوابق پزشکی اخیر</h2>
 
   <div class="record-card" *ngFor="let r of records">
@@ -9,4 +9,24 @@
     </div>
     <button (click)="openFile(r.filePath)">مشاهده فایل</button>
   </div>
+</div> -->
+<div class="bg-white rounded-2xl shadow p-4">
+  <h3 class="text-lg font-bold mb-4">سوابق پزشکی</h3>
+
+  <div *ngIf="records.length === 0" class="text-gray-500">
+    سابقه‌ای ثبت نشده است.
+  </div>
+
+  <ul *ngIf="records.length > 0" class="space-y-4">
+    <li *ngFor="let rec of records" class="p-3 border rounded-xl">
+      <div class="flex justify-between">
+        <div>
+          <p class="font-semibold">{{ rec.doctorName }}</p>
+          <p class="text-sm text-gray-500">{{ rec.createdAt | date:'fullDate' }} - {{ rec.createdAt | date:'shortTime' }}</p>
+          <p class="text-sm mt-2 text-gray-700">{{ rec.description }}</p>
+        </div>
+        <a [href]="rec.filePath" target="_blank" class="text-blue-600 text-sm hover:underline self-center">دانلود فایل</a>
+      </div>
+    </li>
+  </ul>
 </div>

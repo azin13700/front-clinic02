@@ -33,8 +33,8 @@ export class UncomingAppointmentsComponent implements OnInit {
     // ];
 
  this.dashboardService.getUpcomingAppointments().subscribe(data => {
-    this.appointments = data;
-    
+    this.appointments = data.$values;
+
  });
 
 }
