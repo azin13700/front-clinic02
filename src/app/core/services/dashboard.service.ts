@@ -36,7 +36,7 @@ export class DashboardService {
   getRecentMessages() : Observable<any> {
  const token = localStorage.getItem('token');
   const headers = token ? new HttpHeaders().set('Authorization', `Bearer ${token}`) : undefined;
-    return this.http.get(`${this.baseUrl}/Message/GetLatestMessages` ,{headers});
+    return this.http.get(`${this.baseUrl}/Message/LatestMessage` ,{headers});
   }
 }
 

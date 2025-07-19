@@ -12,7 +12,7 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       {
@@ -25,6 +25,11 @@ export const routes: Routes = [
            loadChildren: () =>
            import('src/app/components/doctor-list/Doctor-list.routes'),
             },
+     {  path: 'messages',
+           loadChildren: () =>
+           import('src/app/shared/components/messages-preview/messages-preview.routes'),
+            },
+
      // { path: 'dashboard', component: DashboardComponent },
     //  { path: 'dashboard/doctors', component: DoctorListComponent },
 

@@ -1,4 +1,4 @@
-
+<!--
 <header class="header" id="header">
    <nav class="navbar container">
        <a class="navbar-brand" routerLink="/" >کلینیک هوشمند</a>
@@ -17,8 +17,7 @@
                 <li class="menu-item"  *ngIf="!isLogin"><a routerLink="/register"class="menu-link">ثبت‌نام نکردی؟ کلیک کن</a></li>
                   <div class="welcome"  *ngIf="isLogin">سلام، {{fullName}} عزیز خوش آمدید</div>
                 <div class="actions" *ngIf="isLogin">
-                  <!-- <i class="notif">🔔</i>
-                  <i class="avatar">👩</i> -->
+
                     <button (click)="logout()" >خروج </button>
                 </div>
             </ul>
@@ -34,7 +33,6 @@
 
 <div class="layout-container"  *ngIf="isLogin" >
 
-  <!-- سایدبار -->
   <aside class="sidebar">
     <div class="logo">🩺 کلینیک من</div>
     <nav class="nav">
@@ -47,15 +45,14 @@
     </nav>
   </aside>
 
-  <!-- بخش اصلی -->
   <div class="main-content mt-5">
     <app-dashboard *ngIf="!isShowDoctorList"></app-dashboard>
     <doctor-list *ngIf="isShowDoctorList"></doctor-list>
 
 
-   
+
   </div>
 
 </div>
 
-
+ -->

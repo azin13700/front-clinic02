@@ -1,38 +1,4 @@
-<!-- <div class="messages-section">
-  <div class="header">
-    <h2>پیام‌ها</h2>
-    <button (click)="openAllMessages()">نمایش همه</button>
-  </div>
 
-  <div class="message-card" *ngFor="let msg of messages">
-    <div class="msg-content" [ngClass]="{ 'unread': !msg.isRead }">
-      <strong>{{ msg.sender }}</strong>
-      <p>{{ msg.content }}</p>
-      <span class="timestamp">{{ msg.sentAt  }}</span>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- <div class="bg-white rounded-2xl shadow p-4">
-  <h3 class="text-lg font-bold mb-4">پیام‌ها </h3>
-
-    <h2>پیام‌ها</h2>
-    <button (click)="openAllMessages()">نمایش همه</button>
-
-  <ul  class="space-y-4">
-    <li *ngFor="let rec of messages" class="p-3 border rounded-xl">
-      <div class="flex justify-between">
-        <div>
-          <p class="font-semibold">{{ rec.doctorName }}</p>
-          <p class="text-sm text-gray-500">{{ rec.createdAt | date:'fullDate' }} - {{ rec.createdAt | date:'shortTime' }}</p>
-          <p class="text-sm mt-2 text-gray-700">{{ rec.description }}</p>
-        </div>
-        <a [href]="rec.filePath" target="_blank" class="text-blue-600 text-sm hover:underline self-center">دانلود فایل</a>
-      </div>
-    </li>
-  </ul>
-</div> -->
 <div class="bg-white rounded-2xl shadow p-4">
   <h3 class="text-lg font-bold mb-4">پیام‌های اخیر</h3>
 
@@ -52,3 +18,5 @@
     </li>
   </ul>
 </div>
+
+

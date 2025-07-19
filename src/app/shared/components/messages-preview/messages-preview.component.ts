@@ -16,7 +16,7 @@ messages: Message[] = [];
 
   ngOnInit(): void {
     this.dashboardService.getRecentMessages().subscribe(data => {
-    this.messages = data;
+    this.messages = data.$values;
 
  });
   }

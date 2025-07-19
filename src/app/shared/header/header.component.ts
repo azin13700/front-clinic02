@@ -4,12 +4,13 @@ import { Router, RouterModule } from '@angular/router';
 import { DoctorListComponent } from 'src/app/components/doctor-list/doctor-list.component';
 import { DashboardService } from 'src/app/core/services/dashboard.service';
 import { DashboardComponent } from 'src/app/features/dashboard/dashboard.component';
+import { MessagesPreviewComponent } from '../components/messages-preview/messages-preview.component';
 
 @Component({
   selector: 'app-header',
   encapsulation: ViewEncapsulation.None,
   standalone   : true,
-    imports:[RouterModule ,CommonModule, DashboardComponent,DoctorListComponent ],
+    imports:[RouterModule ,CommonModule, DashboardComponent,DoctorListComponent ,MessagesPreviewComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

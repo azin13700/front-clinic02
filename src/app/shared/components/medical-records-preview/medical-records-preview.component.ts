@@ -22,7 +22,7 @@ export class MedicalRecordsPreviewComponent implements OnInit  {
 
     const userId = 1; // بعداً از JWT
     this.recordService.getRecordsByUserId(userId).subscribe({
-      next: (data) => this.records = data,
+      next: (data) => this.records = data.$values,
       error: (err) => console.error(err)
     });
   }
