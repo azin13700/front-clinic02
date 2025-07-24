@@ -1,120 +1,304 @@
 
-.messages-section {
-  margin-top: 2rem;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+// .messages-section {
+//   margin-top: 2rem;
+//   background: #ffffff;
+//   padding: 2rem;
+//   border-radius: 16px;
+//   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+//   .header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 1.5rem;
 
-    h2 {
-      margin: 0;
-      font-size: 20px;
-    }
+//     h2 {
+//       margin: 0;
+//       font-size: 20px;
+//     }
 
-    button {
-      background: transparent;
-      color: #1976d2;
-      border: 1px solid #1976d2;
-      border-radius: 8px;
-      padding: 4px 12px;
-      font-size: 12px;
-      cursor: pointer;
+//     button {
+//       background: transparent;
+//       color: #1976d2;
+//       border: 1px solid #1976d2;
+//       border-radius: 8px;
+//       padding: 4px 12px;
+//       font-size: 12px;
+//       cursor: pointer;
 
-      &:hover {
-        background-color: #e3f2fd;
-      }
-    }
-  }
+//       &:hover {
+//         background-color: #e3f2fd;
+//       }
+//     }
+//   }
 
-  .message-card {
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    background: #f8f9fb;
-    margin-bottom: 1rem;
+//   .message-card {
+//     padding: 1rem 1.5rem;
+//     border-radius: 12px;
+//     background: #f8f9fb;
+//     margin-bottom: 1rem;
 
-    .msg-content {
-      p {
-        margin: 0.4rem 0;
-      }
+//     .msg-content {
+//       p {
+//         margin: 0.4rem 0;
+//       }
 
-      .timestamp {
-        font-size: 12px;
-        color: #999;
-      }
+//       .timestamp {
+//         font-size: 12px;
+//         color: #999;
+//       }
 
-      &.unread {
-        background-color: #e3f2fd;
-        border-left: 4px solid #1976d2;
-        padding-left: 1rem;
-      }
-    }
-  }
+//       &.unread {
+//         background-color: #e3f2fd;
+//         border-left: 4px solid #1976d2;
+//         padding-left: 1rem;
+//       }
+//     }
+//   }
+// }
+
+
+
+
+// .records-section {
+//   margin-top: 2rem;
+//   background: #ffffff;
+//   padding: 2rem;
+//   border-radius: 16px;
+//   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+
+//   h2 {
+//     margin-bottom: 1.5rem;
+//     font-size: 20px;
+//   }
+
+//   .record-card {
+//     background: #f3f4f6;
+//     border-radius: 12px;
+//     padding: 1rem 1.5rem;
+//     margin-bottom: 1rem;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-start;
+
+//     .content {
+//       max-width: 80%;
+
+//       .desc {
+//         margin: 0;
+//         font-weight: 500;
+//       }
+
+//       .doctor {
+//         display: block;
+//         margin-top: 0.3rem;
+//         color: #444;
+//         font-size: 14px;
+//       }
+
+//       .date {
+//         font-size: 12px;
+//         color: #888;
+//       }
+//     }
+
+//     button {
+//       background-color: #1976d2;
+//       color: white;
+//       border: none;
+//       border-radius: 8px;
+//       padding: 6px 12px;
+//       font-size: 13px;
+//       cursor: pointer;
+
+//       &:hover {
+//         background-color: #1565c0;
+//       }
+//     }
+//   }
+// }
+
+
+// .messages-container2 {
+//   display: flex;
+//   flex-wrap: wrap; /* اجازه می‌ده آیتم‌ها به سطر بعد برن */
+//   gap: 3px; /* فاصله بین کارت‌ها */
+//   //justify-content: center; /* وسط چین کردن کارت‌ها */
+// }
+
+// .body {
+//   flex: 0 0 calc(42% - 40px); /* هر کارت نصف عرض - فاصله */
+//   box-sizing: border-box;
+//   margin-bottom: 20px; /* فاصله پایین کارت‌ها */
+//   display: flex;
+//   justify-content: center; /* وسط چین کارت داخل خودش */
+// }
+
+//         .card{
+//             background-color: #f4f4f4;
+//             height: 136px;
+//             width: 500px;
+//             border: 1px solid white;
+//             box-shadow: 5px 5px 5px #CCC;
+//             position: relative;
+//             transition: 0.5s;
+//         }
+//    .container {
+//     position: absolute; /* چون container الان نسبی هست و در سمت راست، به مطلق تغییر میدیم */
+//     top: 10px;          /* تنظیم فاصله از بالا داخل کارت */
+//     left: 10px;         /* حالا container سمت چپ کارت میشینه */
+//     height: 100px;
+//     width: 200px;
+//     overflow: hidden;
+// }
+
+// /* تغییر موقعیت corner و corner-deco به چپ */
+// .corner {
+//     position: absolute;
+//     top: -20px;
+//     left: 20px;  /* به جای right */
+//     height: 40px;
+//     width: 40px;
+//     background-color: white;
+//     transform: rotate(45deg);
+//     opacity: 0.3;
+//     z-index: 999;
+// }
+
+// .corner-deco {
+//     background-color: #023e7d;
+//     height: 40px;
+//     width: 40px;
+//     position: absolute;
+//     top: 0;
+//     left: 0; /* به جای right */
+// }
+
+// .deco-line {
+//     position: absolute;
+//     top: 10px;
+//     left: 10px;
+//     height: 20px;
+//     width: 20px;
+//     border-top: 3px solid white;
+//     border-right: 3px solid white;
+// }
+
+// .left-line {
+//     position: absolute;
+//     height: 100%;
+//     width: 3px;
+//     background-color: #023e7d;
+//     left: 0; /* خط در سمت چپ container */
+// }
+
+//         .circle{
+//             height: 20px;
+//             width: 20px;
+//             background-color: #023e7d;
+//             border-radius: 100%;
+//           //  position: absolute;
+//             top: -10px;
+//             left: -9px;
+//         }
+//         .text-area{
+//      position: absolute;
+//     width: 370px;
+//     height: 96%;
+//     top: 10px;
+//     left: 102px;
+//     line-height: 0.5ch;
+//     font-family: Arial, Helvetica, sans-serif;
+//     inset-block-end: auto;
+//         }
+//         .header{
+//             font-size: 14px;
+//             font-weight: bold;
+//             color: #023e7d;
+//         }
+//         .text{
+//             font-size: 12px;
+//             color: #818181;
+//         }
+
+//         .card:hover{
+//             transform: translateY(-5px);
+//             background-color: #1a4578;
+//             .corner-deco{
+//             background-color: #c4c4c4;
+//             }
+//             .corner{
+//             background-color: #1a4578;
+//             }
+//             .deco-line{
+//             border-top: 3px solid #1a4578;
+//             border-right: 3px solid #1a4578;
+//             }
+//             .header{
+//             color: c4c4c4;
+//             }
+//             .text{
+//             color: #c4c4c4;
+//             }
+//             .left-line{
+//             background-color: #c4c4c4;
+//             }
+//             .circle{
+//             background-color: #c4c4c4;
+//             }
+//         }
+.body {
+/*   background-color: #222; */
+  font-family: sans-serif;
+  font-size: .8rem;
+  line-height: 150%;
+}
+
+/* Setting up the responsive Grid container - auto-fit + minmax() */
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 3em;
+  margin: 3em;
+}
+
+
+/* Grid inside grid - album cards also use grid for layout setup */
+.album {
+  background: rgba(72, 61, 139, 0.9);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  padding: 1.5em;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.5em;
+  align-items: center;
+  color: white;
+  font-weight: 100;
 }
 
 
 
 
-.records-section {
-  margin-top: 2rem;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 20px;
-  }
-
-  .record-card {
-    background: #f3f4f6;
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    .content {
-      max-width: 80%;
-
-      .desc {
-        margin: 0;
-        font-weight: 500;
-      }
-
-      .doctor {
-        display: block;
-        margin-top: 0.3rem;
-        color: #444;
-        font-size: 14px;
-      }
-
-      .date {
-        font-size: 12px;
-        color: #888;
-      }
-    }
-
-    button {
-      background-color: #1976d2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 6px 12px;
-      font-size: 13px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #1565c0;
-      }
-    }
-  }
+/* Important step - image will spill over the container if width is not declared explicitly */
+.album__artwork {
+  width: 100%;
+  border-radius: 0.4em;
 }
 
+
+/* Some additional text styling */
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.album__artist {
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  font-style: oblique;
+  letter-spacing: .7px;
+}

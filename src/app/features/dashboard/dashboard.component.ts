@@ -8,6 +8,7 @@ import { UserInfoCardComponent } from 'src/app/shared/components/user-info-card/
 import { DashboardService } from '../../core/services/dashboard.service';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CommonModule } from '@angular/common';
+import { DoctorListComponent } from 'src/app/components/doctor-list/doctor-list.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +17,7 @@ import { CommonModule } from '@angular/common';
   CommonModule,
     DashboardRoutingModule,
     UserInfoCardComponent,UncomingAppointmentsComponent
-    ,MedicalRecordsPreviewComponent , MessagesPreviewComponent,
+    ,MedicalRecordsPreviewComponent , MessagesPreviewComponent,DoctorListComponent,
   QuickActionsComponent],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
@@ -25,6 +26,8 @@ export class DashboardComponent implements OnInit {
    fullName: string = '';
   role: string = '';
   user:any;
+  activeSection: string = 'dashboard';
+
 
   constructor(private router: Router, private dashboardService :DashboardService ) {}
 
@@ -63,6 +66,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+   // تابعی که وقتی آیتم سایدبار کلیک شد اجرا میشه
+  setActiveSection(section: string) {
+    this.activeSection = section;
+  }
 
 
 }

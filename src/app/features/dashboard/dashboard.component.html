@@ -1,69 +1,171 @@
-<!-- <div class="dashboard-container" >
-  <h3>سلام {{fullName}} عزیز</h3>
-  <p>نقش شما در سیستم : {{role}}</p>
+   <div class="dashboard">
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <span>Quantum</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active" [class.active]="activeSection === 'dashboard'" (click)="setActiveSection('dashboard')">
+                    <i class="fas fa-home"></i>
+                    <span>داشبورد</span>
+                    <div class="nav-indicator"></div>
+                </li>
+                  <li data-section="user-info" data-content="settings-content" [class.active]="activeSection === 'user-info'" (click)="setActiveSection('user-info')">
+                    <i class="fas fa-cog"></i>
+                    <span>پروفایل</span>
+                    <div class="nav-indicator"></div>
+                </li>
+                <li data-section="doctorList" data-content="analytics-content" [class.active]="activeSection === 'doctorList'" (click)="setActiveSection('doctorList')">
+                    <i class="fas fa-chart-line"></i>
+                    <span>پزشکان</span>
+                    <div class="nav-indicator"></div>
+                </li>
+                <li data-section="messages" data-content="projects-content" [class.active]="activeSection === 'records'" (click)="setActiveSection('records')">
+                    <i class="fas fa-project-diagram"></i>
+                    <span> سوابق</span>
+                    <div class="nav-indicator"></div>
+                </li>
+                <li data-section="messages" data-content="messages-content"   [class.active]="activeSection === 'messages'" (click)="setActiveSection('messages')">
+                    <i class="fas fa-envelope"></i>
+                         <span>پیام ها</span>
+                    <div class="nav-indicator"></div>
+                    <span class="badge">5</span>
+                </li>
+                <li data-section="uncoming-appointments" data-content="settings-content" [class.active]="activeSection === 'uncoming-appointments'" (click)="setActiveSection('uncoming-appointments')">
+                    <i class="fas fa-cog"></i>
+                    <span>نوبت‌های آینده</span>
+                    <div class="nav-indicator"></div>
+                </li>
+            </ul>
+        </nav>
 
-<app-uncoming-appointments></app-uncoming-appointments>
+        <main class="main-content">
+            <header class="matero-header">
+                <div class="header-left">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search anything...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notifications">
+                        <div class="notification-trigger">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </div>
+                        <div class="notifications-dropdown">
+                            <div class="notifications-header">
+                                <div class="header-left">
+                                    <h3 class="notifications-title">Notifications</h3>
+                                    <span class="mark-all">Mark all read</span>
+                                </div>
+                                <button class="settings-btn">
+                                    <i class="fas fa-cog"></i>
+                                    Settings
+                                </button>
+                            </div>
+                            <div class="filter-pills">
+                                <span class="filter-pill active">All</span>
+                                <span class="filter-pill">Unread</span>
+                                <span class="filter-pill">Important</span>
+                            </div>
+                            <div class="notification-list">
+                            </div>
+                            <div class="dropdown-footer">
+                                <button class="filter-button">
+                                    <i class="fas fa-clock"></i>
+                                    Last 7 days
+                                </button>
+                                <button class="filter-button">
+                                    <i class="fas fa-filter"></i>
+                                    Filter
+                                </button>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="profile-trigger">
+                            <div class="profile-avatar">
+                                <span class="avatar-text">JD</span>
+                            </div>
+                            <div class="profile-info">
+                                <span class="profile-name">John Doe</span>
+                                <span class="profile-role">Administrator</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="profile-dropdown">
+                            <div class="dropdown-header">
+                                <div class="header-avatar">
+                                    <span class="avatar-text">JD</span>
+                                </div>
+                                <div class="header-info">
+                                    <h4>John Doe</h4>
+                                    <span>john.doeexample.com</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-palette"></i>
+                                    <span>Theme</span>
+                                    <label class="theme-switch">
+                                        <input type="checkbox" id="theme-toggle">
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <i class="fas fa-bell"></i>
+                                    <span>Notifications</span>
+                                </li>
+                            </ul>
+                            <div class="dropdown-divider"></div>
+                            <ul class="dropdown-menu">
+                                <li class="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <div class="content2">
+          <div   *ngIf="activeSection === 'dashboard'">
+
+              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+
+               <div   *ngIf="activeSection === 'doctorList'">
+                <doctor-list></doctor-list>
+               </div>
+                 <div   *ngIf="activeSection === 'messages'">
+                <app-messages-preview></app-messages-preview>
+               </div>
+               <div   *ngIf="activeSection === 'records'">
+                    <app-medical-records-preview></app-medical-records-preview>
+               </div>
+               <div   *ngIf="activeSection === 'user-info'">
+                   <app-user-info-card></app-user-info-card>
+               </div>
+               <div   *ngIf="activeSection === 'uncoming-appointments'">
+                            <app-uncoming-appointments></app-uncoming-appointments>
+               </div>
+            </div>
 
 
-  <div class="actions">
 
-
-  </div>
-
-</div> -->
-
-<div class="layout-container">
-
-  <!-- سایدبار -->
-  <!-- <aside class="sidebar">
-    <div class="logo">🩺 کلینیک من</div>
-    <nav class="nav">
-      <a routerLink="/dashboard" routerLinkActive="active"><i class="icon">🏠</i> داشبورد</a>
-      <a routerLink="/doctor-list" routerLinkActive="active"><i class="icon">🏠</i> پزشکان</a>
-      <a routerLink="/appointments/new" routerLinkActive="active"><i class="icon">📅</i> گرفتن نوبت</a>
-      <a routerLink="/messages" routerLinkActive="active"><i class="icon">💬</i> پیام‌ها</a>
-      <a routerLink="/records" routerLinkActive="active"><i class="icon">📁</i> سوابق</a>
-      <a routerLink="/profile" routerLinkActive="active"><i class="icon">👤</i> پروفایل</a>
-    </nav>
-  </aside> -->
-
-  <!-- بخش اصلی -->
-  <div class="main-content">
-
-
-    <!-- نوار بالا -->
-    <!-- <header class="topbar">
-      <div class="welcome">سلام، {{fullName}} عزیز خوش آمدید</div>
-      <div class="actions">
-        <i class="notif">🔔</i>
-        <i class="avatar">👩</i>
-           <button (click)="logout()">خروج </button>
-      </div>
-    </header> -->
-
-    <!-- بدنه داشبورد -->
-    <section class="dashboard-content">
-      <div class="row">
-        <app-user-info-card></app-user-info-card>
- <app-quick-actions></app-quick-actions>
-
-      </div>
-
-      <div class="row">
-        <app-medical-records-preview></app-medical-records-preview>
-  <app-messages-preview></app-messages-preview>
-      </div>
-      <div class="row">
-
-
-      </div>
-
-      <div class="row ">
-
-          <app-uncoming-appointments></app-uncoming-appointments>
-
-      </div>
-    </section>
-  </div>
-
-</div>
+          </main>
+    </div>
