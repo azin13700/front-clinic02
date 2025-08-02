@@ -6,12 +6,26 @@
 
 // Sidebar
 .sidebar {
-  width: 220px;
-  background: #112D4E;
-  color: white;
+  width:200px;
+  //background: #112D4E;
+  //color: white;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
+
+    background: #1d3557;
+    color: #fff;
+   // display: flex;
+   // flex-direction: column;
+   // padding: 20px 0;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  //  z-index: 10;
+   // position: fixed;
+    //top: 0;
+   // left: 0;
+   // bottom: 0;
+   // overflow-y: auto;
 
   .logo {
     font-weight: bold;

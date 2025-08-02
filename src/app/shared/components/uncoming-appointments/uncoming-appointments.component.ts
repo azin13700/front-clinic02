@@ -12,6 +12,11 @@ import { DashboardService } from 'src/app/core/services/dashboard.service';
 export class UncomingAppointmentsComponent implements OnInit {
   constructor(private dashboardService: DashboardService) {}
   appointments: Appointment[] = [];
+  colors = [
+    'linear-gradient(45deg, #3498db, #457b9d)',
+    'linear-gradient(45deg, #a8dadc, #5bb9bc)',
+    'linear-gradient(45deg, #f1faee, rgb(156, 179, 156))',
+  ];
 
   ngOnInit(): void {
     // داده تستی تا وقتی بک‌اند وصل نشده
@@ -37,5 +42,12 @@ export class UncomingAppointmentsComponent implements OnInit {
 
  });
 
+}
+
+cancelAppointment(id:any){
+        this.dashboardService.cancelAppointment(id).subscribe((doc)=> {
+    //  this.doctor = doc;
+       //console.log("رزرو برای دکتر با شناسه:", this.doctor);
+    });
 }
 }

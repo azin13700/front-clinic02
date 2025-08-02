@@ -62,7 +62,7 @@ bookAppointment(doctorId: number) {
     this.modalVisible = true;
 
 }
- closeModal() {
+ closeModal2() {
     this.modalVisible = false;
     this.doctorId = null;
   }
@@ -91,6 +91,23 @@ bookAppointment(doctorId: number) {
             form.resetForm()
         }
     }
+
+
+      isOpen = false;
+
+  openModal() {
+    this.isOpen = true;
+  }
+
+  closeModal() {
+    this.isOpen = false;
+  }
+
+  onKeydown(event: KeyboardEvent) {
+    if(event.key === 'Escape') {
+      this.closeModal();
+    }
+  }
 
 
 }

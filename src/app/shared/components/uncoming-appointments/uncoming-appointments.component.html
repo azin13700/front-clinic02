@@ -1,6 +1,12 @@
-<div class="appointments-section">
+<!--
+  <div class="row">
   <h2>نوبت‌های آینده</h2>
+  </div>
 
+<div class="appointments-section">
+
+
+<br/>
   <div class="appointment-card" *ngFor="let a of appointments">
     <div class="left">
       <h3>{{ a.doctorName }}</h3>
@@ -11,6 +17,25 @@
       <span class="status" [ngClass]="a.status === 'رزرو شده' ? 'active' : 'cancelled'">{{ a.status }}</span>
       <button *ngIf="a.status === 'رزرو شده'">لغو نوبت</button>
     </div>
+  </div>
+</div> -->
+
+<div class="body">
+   <h4 class="text-lg font-bold mb-4"> نوبت‌های آینده</h4>
+  <div class="albums">
+    <div class="album" *ngFor="let a of appointments; let i = index" [ngStyle]="{'--before-bg': colors[i % colors.length]}" >
+        <div class="activity-details">
+            <h4>{{ a.doctorName }}  </h4>
+            <p>{{ a.appointmentDate }}  </p>
+            <div class="activity-time">{{a.appointmentTime}}  </div>
+          </div>
+            <div class="right">
+      <span class="status" [ngClass]="a.status === 'رزرو شده' ? 'active' : 'cancelled'">{{ a.status }}</span>
+      <button *ngIf="a.status === 'رزرو شده'"  (click)="cancelAppointment(a.id)" >لغو نوبت</button>
+    </div>
+    </div>
+
+
   </div>
 </div>
 

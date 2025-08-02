@@ -13,6 +13,11 @@ import { DashboardService } from 'src/app/core/services/dashboard.service';
 export class MessagesPreviewComponent implements OnInit  {
     constructor(private dashboardService: DashboardService) {}
 messages: Message[] = [];
+ colors = [
+    'linear-gradient(45deg, #3498db, #457b9d)',
+    'linear-gradient(45deg, #a8dadc, #5bb9bc)',
+    'linear-gradient(45deg, #f1faee, rgb(156, 179, 156))',
+  ];
 
   ngOnInit(): void {
     this.dashboardService.getRecentMessages().subscribe(data => {

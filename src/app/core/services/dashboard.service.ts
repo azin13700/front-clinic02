@@ -38,5 +38,13 @@ export class DashboardService {
   const headers = token ? new HttpHeaders().set('Authorization', `Bearer ${token}`) : undefined;
     return this.http.get(`${this.baseUrl}/Message/LatestMessage` ,{headers});
   }
+
+
+    cancelAppointment(id:any): Observable<any> {
+     const token = localStorage.getItem('token');
+  const headers = token ? new HttpHeaders().set('Authorization', `Bearer ${token}`) : undefined;
+    return this.http.delete(`${this.baseUrl}/Appointment/${id}` ,{headers});
+
+  }
 }
 

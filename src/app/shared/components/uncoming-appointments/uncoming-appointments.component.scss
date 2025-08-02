@@ -1,34 +1,36 @@
-.appointments-section {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+// .appointments-section {
+//   background: #fff;
+//   padding: 2rem;
+//   border-radius: 16px;
+//   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+//       display: flex;
+//   flex-wrap: wrap;
 
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 20px;
-  }
+//   h2 {
+//     margin-bottom: 1.5rem;
+//     font-size: 20px;
+//   }
 
-  .appointment-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f7f9fc;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-     transform: translateY(-1.1rem);
-  }
+//   .appointment-card {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: #f7f9fc;
+//     padding: 1rem 1.5rem;
+//     border-radius: 12px;
+//     margin-bottom: 1rem;
+//      transform: translateY(-1.1rem);
+//   }
 
-    .left h3 {
-      margin: 0;
-      font-size: 16px;
-    }
+//     .left h3 {
+//       margin: 0;
+//       font-size: 16px;
+//     }
 
-    .left p {
-      margin: 0.2rem 0;
-      color: #555;
-    }
+//     .left p {
+//       margin: 0.2rem 0;
+//       color: #555;
+//     }
 
     .right {
       display: flex;
@@ -66,4 +68,133 @@
         }
       }
     }
-  }
+//   }
+
+
+.body {
+/*   background-color: #222; */
+  font-family: sans-serif;
+  font-size: .8rem;
+  line-height: 150%;
+}
+
+/* Setting up the responsive Grid container - auto-fit + minmax() */
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 3em;
+  margin: 3em;
+}
+
+
+/* Grid inside grid - album cards also use grid for layout setup */
+.album {
+  // background: rgba(72, 61, 139, 0.9);
+  // box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  // padding: 1.5em;
+  // border-radius: 1em;
+  // display: grid;
+  // grid-template-columns: 150px 1fr;
+  // gap: 1.5em;
+  // align-items: center;
+  // color: white;
+  // font-weight: 100;
+    background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s 0.1s both;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.album::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--before-bg);
+  border-radius: 12px 12px 0 0;
+  z-index: 1;
+}
+
+// .album::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 6px;
+// }
+
+// .album:nth-child(1)::before {
+//   background: linear-gradient(45deg, #3498db, #457b9d);
+// }
+
+// .album:nth-child(2)::before {
+//   background: linear-gradient(45deg, #a8dadc, #5bb9bc);
+// }
+
+// .album:nth-child(3)::before {
+//   background: linear-gradient(45deg, #f1faee, rgb(156, 179, 156));
+// }
+
+.album:hover {
+   color: #fff !important;
+           transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-details h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.activity-details p {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+
+/* Important step - image will spill over the container if width is not declared explicitly */
+.album__artwork {
+  width: 100%;
+  border-radius: 0.4em;
+}
+
+
+/* Some additional text styling */
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.album__artist {
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  font-style: oblique;
+  letter-spacing: .7px;
+}
+
+
+

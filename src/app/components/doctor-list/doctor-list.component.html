@@ -1,20 +1,18 @@
-
-
 <div class="cards-container">
-  <div class="user-card" *ngFor="let doctor of doctors">
-   <div class="avatar" >
-    <img src="https://img.freepik.com/premium-vector/cute-woman-avatar-profile-vector-illustration_1058532-14592.jpg" alt="User Avatar" />
-  </div>
-  <div class="info">
-  <h4>{{ doctor.fullName }}</h4>
-  <p>تخصص: {{ doctor.specialty || '---' }}</p>
-  <p>ایمیل: {{ doctor.email }}</p>
-     <button (click)="bookAppointment(doctor.id)"  href="#open-modal">
+
+
+<div class="card" style="width: 18rem;" *ngFor="let doctor of doctors" >
+  <img src="https://img.freepik.com/premium-vector/cute-woman-avatar-profile-vector-illustration_1058532-14592.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ doctor.fullName }} </h5>
+    <p class="card-text">تخصص: {{ doctor.specialty || '---' }}</p>
+    <p>ایمیل: {{ doctor.email }}</p>
+      <button (click)="bookAppointment(doctor.id)"  href="#open-modal">
         رزرو وقت
       </button>
   </div>
-  </div>
 </div>
+
 <div class="modal-window" [class.show]="modalVisible">
   <div>
     <div class="container">
@@ -45,6 +43,35 @@
 
 </div>
 
+
+</div>
+</div>
+
+<!--
+
+<div class="cards-container">
+  <div class="user-card" *ngFor="let doctor of doctors">
+   <div class="avatar" >
+    <img src="https://img.freepik.com/premium-vector/cute-woman-avatar-profile-vector-illustration_1058532-14592.jpg" alt="User Avatar" />
+  </div>
+  <div class="info">
+  <h4>{{ doctor.fullName }}</h4>
+  <p>تخصص: {{ doctor.specialty || '---' }}</p>
+  <p>ایمیل: {{ doctor.email }}</p>
+     <button (click)="bookAppointment(doctor.id)"  href="#open-modal">
+        رزرو وقت
+      </button>
+  </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+</div> -->
+
+
 <!-- <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Recipient's username" >
 </div>
@@ -56,14 +83,6 @@
     <h5> رزرو وقت با {{ doctor?.fullName }}</h5>
    <p-calendar [(ngModel)]="selectedDate" dateFormat="yy/mm/dd" ></p-calendar>
 <p>تاریخ انتخاب شده: {{ selectedDate | date:'yyyy/MM/dd' }}</p> -->
-
-
-
-  </div>
-</div>
-
-
-
 
 
 <!-- <div class="p-6 max-w-xl mx-auto bg-white rounded-2xl shadow">
