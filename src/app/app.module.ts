@@ -13,6 +13,7 @@ import {MaterialPersianDateAdapter,PERSIAN_DATE_FORMATS} from './persian-dateada
 import { LayoutComponent } from './layout/layout.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -44,7 +45,8 @@ import { AuthInterceptor } from './auth.interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true,  // خیلی مهم که multi:true باشه
-    },],
+    },
+  MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

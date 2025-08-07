@@ -32,6 +32,10 @@
             <div class="right">
       <span class="status" [ngClass]="a.status === 'رزرو شده' ? 'active' : 'cancelled'">{{ a.status }}</span>
       <button *ngIf="a.status === 'رزرو شده'"  (click)="cancelAppointment(a.id)" >لغو نوبت</button>
+      <div class="card flex justify-center gap-2">
+    <p-toast />
+  
+</div>
     </div>
     </div>
 
